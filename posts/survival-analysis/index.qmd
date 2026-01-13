@@ -37,8 +37,6 @@ Besides CoxPH, there are also machine learning models for survival analysis. Ran
 
 ![Decision tree in a random forest splitting parent into child nodes based on feature value threshold](rf.jpg){#fig-rf width="300"}
 
-Decision tree in a random forest splitting parent into child nodes based on feature value threshold
-
 # Evaluation
 
 Survival analysis models are evaluated on their discrimination and calibration. Discrimination refers to whether the model can distinguish between high and low risk patients. The most common metric used is the concordance index (C-index). This measures whether subjects who fail earlier have a higher risk score as mentioned above. This is a single value over the entire study period. If a specific time range is of primary interest (e.g. is the model good at predicting death within 2 years?), a more useful discrimination metric will be the time-dependent area under the curve (tdAUC). This measures whether subjects who fail by a given time have a higher risk score than subjects who fail after this time. Calibration measures whether the model can accurately predict survival probability. This is assessed through comparing predicted probability versus fraction of actual events. For example, among those with a predicted 0.2 probability of death, we expect 20% will die if the model is well-calibrated.
